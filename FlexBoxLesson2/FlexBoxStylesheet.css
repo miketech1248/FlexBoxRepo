@@ -1,4 +1,5 @@
 html, body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
@@ -8,16 +9,21 @@ html, body {
     margin: 0;
 }
 
-.navbar {
-    display: flex;
-    padding: 10px;
+.navbar, .container {
+    
     max-width: 1140px;
     width: 100%;
     margin: 0 auto;
-    justify-content: space-between;
 }
 
-.brand, .nav-link {
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    padding-top: 35px;
+}
+
+.brand, .nav-link, a {
     text-transform: uppercase;
     color: #303137;
 }
@@ -37,7 +43,7 @@ html, body {
     list-style: none;
 }
 
-.topnav .nav-link {
+.topnav .nav-link, a {
     text-decoration: none;
     color: black;
     padding-left: 20px;
@@ -48,6 +54,82 @@ html, body {
     display: none;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    padding: 6rem 0;
+}
+
+.headshot-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+img.headshot {
+    border-radius: 50%;
+    max-width: 300px;
+    width: 100%;
+}
+
+h1.name {
+    text-align: center;
+}
+
+section.services {
+    background-color: #F1F3Fa;
+    padding: 4rem 1rem;
+}
+
+.media-object {
+    display: flex;
+    align-items: center;
+    padding: 4rem 1rem;
+}
+
+.blurb-wrapper-right, .blurb-wrapper-left {
+    flex: 1;
+}
+
+.blurb-wrapper-left, .icon-left {
+    order: 1;
+}
+
+.icon-left, .icon-right {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+}
+
+.icon-right, .blurb-wrapper-right {
+    order: 2;
+}
+
+.blurb-header {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.blurb-info {
+    color: #646B90;
+    font-size: 18px;
+}
+
+.quote-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.quote-btn {
+    color:#ffffff;
+    background-color: #66B6D3;
+    font-size: 18px;
+    border-style: none;
+    padding: .8rem 4rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 20px rgba(0,0,0,.5);
+}
+
 @media (max-width: 768px) {
     ul.topnav li a.nav-link {
         display: none;
@@ -56,28 +138,38 @@ html, body {
     ul.topnav li.dropdownLink {
         display: block;
         position: absolute;
-        top: 15px;
+        top: 35px;
         right: 20px;
     }
     ul.topnav.responsive {
         flex-direction: column;
+        text-align: right;
     }
 
     ul.topnav.responsive li {
             position: relative;
             top: 30px;
+            right: 30px;
         }
 
     ul.topnav.responsive li.dropdownLink {
         position: absolute;
-        top: 15px;
+        top: 35px;
         right: 20px;
     }
 
     ul.topnav.responsive li a.nav-link {
         display: block;
+        line-height: 2;
     }
 
+    ul li.dropdownLink a {
+        text-decoration: none;
+        color: black;
+        font-size: 25px;
+    }
+    
+    
 }
 
 
