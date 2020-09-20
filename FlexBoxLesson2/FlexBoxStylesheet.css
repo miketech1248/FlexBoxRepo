@@ -130,6 +130,49 @@ section.services {
     box-shadow: 0 5px 20px rgba(0,0,0,.5);
 }
 
+.section-header {
+    text-align: center;
+    padding: 6rem 0 4rem;
+}
+
+.portfolio-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.portfolio-object {
+    max-width: 250px;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-box {
+    width: 250px;
+    height: 250px;
+    background-color: #F1F3Fa;
+    transition: .2s ease-in-out;
+}
+
+.portfolio-box:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 768px) {
     ul.topnav li a.nav-link {
         display: none;
@@ -168,11 +211,15 @@ section.services {
         color: black;
         font-size: 25px;
     }
-    
+
     
 }
 
-
+@media(max-width: 599px) {
+    .portfolio-wrapper {
+        justify-content: center;
+    }
+}
 
 
 
